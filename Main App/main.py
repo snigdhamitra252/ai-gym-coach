@@ -25,8 +25,10 @@ def main():
         layout="centered"
     )
 
-    load_css(os.path.join(os.getcwd(), "static", "style.css"))
-    inject_local_font(os.path.join(os.getcwd(), "static", "AdobeClean.otf"), "AdobeClean")
+    load_css(os.path.join(os.path.dirname(os.path.abspath(__file__)), "static", "style.css"))
+
+    inject_local_font(os.path.join(os.path.dirname(os.path.abspath(__file__)), "static", "AdobeClean.otf"), "AdobeClean")
+
 
     init_db()
 
