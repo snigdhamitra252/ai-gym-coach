@@ -20,7 +20,8 @@ class LLMCoach:
         ]
 
         response = self.client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
+            model="openai/gpt-oss-120b",
+            # model="llama-3.3-70b-versatile",
             messages=messages,
             temperature=0.4,
         )
